@@ -1,32 +1,100 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/"><img src="../assets/img/logos/Simbolo flor COR.png" alt="logo" width="30" height="24">Mindful Play</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+<div *ngIf="!mobile">
+  <header class="h-100">
+    <mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar intro-fixed-nav"
+      [containerInside]="false">
+      <mdb-navbar-brand>
+        <a class="logo navbar-brand text-dark" href="#">
+          <strong><img src="../../assets/img/logos/Simbolo flor COR.png" alt="logo" width="50" height="44">Mindful
+            Play</strong>
+        </a>
+      </mdb-navbar-brand>
+      <links>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">O que é Mindfulness
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item active waves-light dropdown">
+                <a class="nav-link text-dark font-weight-bold">Sobre a Mindful Play</a>
+                <div class="dropdown-content">
+                  <a class="dropdown-item font-weight-bold">Metodologia</a>
+                  <a class="dropdown-item font-weight-bold">Programa</a>
+                </div>
+              </li>
+              <li class="nav-item waves-light">
+                <a class="nav-link text-dark font-weight-bold">Sobre a intrutora</a>
+              </li>
+              <li class="nav-item active waves-light dropdown">
+                <a class="nav-link text-dark font-weight-bold">Mindfulness no ambiente educacional</a>
+                <div class="dropdown-content">
+                  <a class="dropdown-item font-weight-bold">Você sabia?</a>
+                  <a class="dropdown-item font-weight-bold">Por quê Mindfulness nas escolas?</a>
+                  <a class="dropdown-item font-weight-bold">Benefícios para educadores e gestores?</a>
+                  <a class="dropdown-item font-weight-bold">Benefícios para crianças e adolescentes</a>
+                  <a class="dropdown-item font-weight-bold">Um novo ABC</a>
+                </div>
+              </li>
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">Perspectivas Neorocientíficas</a>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <div class="col-md-12">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">Mindfulness e SEL</a>
+              </li>
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">Práticas Guiadas</a>
+              </li>
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">Blog</a>
+              </li>
+              <li class="nav-item active waves-light">
+                <a class="nav-link text-dark font-weight-bold">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </links>
+    </mdb-navbar>
+  </header>
+</div>
+
+<div *ngIf="mobile" class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-light p-4">
+      <h5 class="text-dark h4"><img src="../../assets/img/logos/Simbolo flor COR.png" alt="logo" width="50"
+          height="44">Mindful Play</h5>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active waves-light">
+          <a class="nav-link text-dark">O que é Mindfulness
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link text-dark dropdown-toggle" mat-button [matMenuTriggerFor]="menu">Sobre a Mindful Play</a>
+          <mat-menu #menu="matMenu" yPosition="above">
+            <ul class="navbar-nav mr-auto">
+              <li mat-menu-item><a class="dropdown-item" href="#">Action</a></li>
+              <li mat-menu-item><a class="dropdown-item" href="#">Action 2</a></li>
+            </ul>
+          </mat-menu>
+        </li>
+        <li class="nav-item waves-light" mdbWavesEffect>
+          <a class="nav-link text-dark">Profile</a>
+        </li>
+      </ul>
     </div>
+
+  </div>
+  <nav class="navbar navbar-light bg-light text-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+      aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </nav>
+</div>
