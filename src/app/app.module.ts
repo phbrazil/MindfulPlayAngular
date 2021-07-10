@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarModule, WavesModule } from 'angular-bootstrap-md'
 import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     NavbarModule,
     WavesModule,
     MatMenuModule,
-    BrowserAnimationsModule  
+    BrowserAnimationsModule,
+    Ng2PageScrollModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
