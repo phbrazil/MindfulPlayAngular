@@ -31,7 +31,8 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
     WavesModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    Ng2PageScrollModule  
+    Ng2PageScrollModule,  
+
   ],
   providers: [],
   bootstrap: [AppComponent]
