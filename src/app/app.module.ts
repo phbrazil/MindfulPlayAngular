@@ -12,13 +12,19 @@ import { NavbarModule, WavesModule } from 'angular-bootstrap-md'
 import {MatMenuModule} from '@angular/material/menu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { BlogComponent } from './blog/blog.component';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    BlogComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +37,9 @@ import {Ng2PageScrollModule} from 'ng2-page-scroll';
     WavesModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    Ng2PageScrollModule,  
+    Ng2PageScrollModule, 
+    CommonModule,
+    RouterModule 
 
   ],
   providers: [],

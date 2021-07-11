@@ -1,4 +1,25 @@
-<app-navbar></app-navbar>
-<app-home></app-home>
-<app-footer></app-footer>
-<router-outlet></router-outlet>
+<div style="padding: 5px;">
+    <ul class="nav nav-pills">
+        <li routerLinkActive="active">
+            <a routerLink="/home"><img src="/assets/img/logos/Simbolo flor COR.png" alt="logo" width="30" height="30">
+                Home</a>
+        </li>
+        <li *ngFor="let link of links" class="dropdown">
+            <a pageScroll class="dropdown-toggle" href="#{{link.id}}">{{link.title}} <span
+                    class="sr-only">(current)</span></a>
+            <div *ngIf="link.subLink" class="dropdown-content">
+                <div *ngFor="let subLink of link.subLinks">
+                    <a pageScroll href="#{{subLink.id}}">{{subLink.title}}</a>
+                </div>
+            </div>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="/blog">Blog</a>
+        </li>
+    </ul>
+    <br />
+    <!--app-navbar></app-navbar>
+    <app-home></app-home>
+    <app-footer></app-footer-->
+    <router-outlet></router-outlet>
+</div>

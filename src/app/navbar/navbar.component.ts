@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 declare var $: any;
 
 
@@ -8,8 +9,6 @@ declare var $: any;
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
-  isNavbarCollapsed = true;
 
   links: any[] = [
     {
@@ -96,7 +95,7 @@ export class NavbarComponent implements OnInit {
     {
       title: "Blog",
       id: "blog",
-      path: "/blog",
+      path: "blog",
       subLink: false,
       subLinks: [{}
       ]
@@ -112,12 +111,12 @@ export class NavbarComponent implements OnInit {
 
   mobile = false;
 
-  public isCollapsed = false;
-  
-  collapsed = true;
+  constructor(private router: Router) { }
 
-
-  constructor() { }
+  goToPage(pageName: string) : void{
+    console.log(pageName)
+    this.router.navigate([`${pageName}`]);
+  }
 
   ngOnInit(): void {
 

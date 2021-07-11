@@ -32,14 +32,17 @@
                     </div>
                   </div>
                 </li>
-                <li *ngFor="let link of links2" class="dropdown">
+                <li *ngFor="let link of links2" class="dropdown" routerLinkActive="active">
                   <a class="dropdown-toggle" href="#{{link.id}}">{{link.title}} <span
                       class="sr-only">(current)</span></a>
                   <div *ngIf="link.subLink" class="dropdown-content">
                     <div *ngFor="let subLink of link.subLinks">
-                      <a href="#{{subLink.id}}">{{subLink.title}}</a>
+                      <a routerLink="{{subLink.id}}">{{subLink.title}}</a>
                     </div>
                   </div>
+                </li>
+                <li>
+                  <button class='btn btn-sm btn-success' (click)="goToPage('blog')">Blog</button>
                 </li>
               </ul>
             </div>
