@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog',
@@ -7,10 +9,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  constructor() { }
+  public links = ['./assets/open-graph-test/medium-angular.json'];
+
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
 
   }
+
+  public apiCallbackFn = (route: string) => {
+    return this.http.get('./assets/open-graph-test/medium-angular.json').pipe(delay(2500));
+  };
 
 }

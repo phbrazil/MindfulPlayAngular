@@ -9,13 +9,14 @@ import { FooterComponent } from './footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarModule, WavesModule } from 'angular-bootstrap-md'
-import {MatMenuModule} from '@angular/material/menu';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {Ng2PageScrollModule} from 'ng2-page-scroll';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 import { BlogComponent } from './blog/blog.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgxLinkPreviewModule } from 'ngx-link-preview';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HomeComponent,
     FooterComponent,
     BlogComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,10 +38,11 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     WavesModule,
     MatMenuModule,
     BrowserAnimationsModule,
-    Ng2PageScrollModule, 
+    Ng2PageScrollModule,
     CommonModule,
-    RouterModule 
-
+    RouterModule,
+    NgxLinkPreviewModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
