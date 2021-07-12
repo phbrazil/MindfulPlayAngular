@@ -9,8 +9,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'home', component: HomeComponent },
-  { path: '**', component: PageNotFoundComponent },
-  { path: '', redirectTo: '/', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '404', component: PageNotFoundComponent },
+  { path: '**', redirectTo: '/404' },
+
 
 
 ];
@@ -19,7 +21,7 @@ const routes: Routes = [
   imports: [
     //CommonModule,
     //BrowserModule,
-    RouterModule.forRoot(routes, { useHash: true })],
+    RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

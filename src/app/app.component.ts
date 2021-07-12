@@ -63,6 +63,43 @@ export class AppComponent {
           title: "Um novo ABC",
           id: "novoABC"
         },
+        
+      ]
+    },
+    {
+      title: "Perspectivas Neorocientíficas",
+      id: "perspectivas",
+      subLink: false,
+      subLinks: [{}
+      ]
+    },
+    {
+      title: "Mindfulness e SEL",
+      id: "sel",
+      subLink: false,
+      subLinks: [{}
+      ]
+    },
+    {
+      title: "Práticas Guiadas",
+      id: "praticas",
+      subLink: false,
+      subLinks: [{}
+      ]
+    },
+    /*{
+      title: "Blog",
+      id: "blog",
+      path: "blog",
+      subLink: false,
+      subLinks: [{}
+      ]
+    },*/
+    {
+      title: "Contato",
+      id: "contato",
+      subLink: false,
+      subLinks: [{}
       ]
     },
 
@@ -90,14 +127,14 @@ export class AppComponent {
       subLinks: [{}
       ]
     },
-    {
+    /*{
       title: "Blog",
       id: "blog",
       path: "blog",
       subLink: false,
       subLinks: [{}
       ]
-    },
+    },*/
     {
       title: "Contato",
       id: "contato",
@@ -106,5 +143,5 @@ export class AppComponent {
       ]
     },
   ]
-  
+
 }

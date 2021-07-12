@@ -1,23 +1,35 @@
-<div style="padding: 2px;">
-    <ul class="nav nav-pills">
-        <li routerLinkActive="active">
-            <a routerLink="/home"><img src="assets/img/logos/Simbolo flor COR.png" alt="logo" width="30" height="30">
-                Home</a>
+<div class="col-md-12">
+    <ul class="nav nav-tabs nav-pills" style="background-color: white">
+        <li routerLinkActive="active" class="nav-item col-md-2">
+            <a routerLink="/home" class="nav-link"><img src="assets/img/logos/Simbolo flor COR.png" alt="logo"
+                    width="30" height="30">
+                Bem-vindo</a>
         </li>
-        <li *ngFor="let link of links" class="dropdown">
-            <a pageScroll class="dropdown-toggle" href="#{{link.id}}">{{link.title}} <span
+        <li routerLinkActive="active" class="nav-item">
+            <a routerLink="/blog" class="nav-link">Blog</a>
+        </li>
+        <li routerLinkActive="active" *ngFor="let link of links" class="dropdown nav-item">
+            <a pageScroll class="dropdown-toggle nav-link" href="#{{link.id}}">{{link.title}}<span
+                    class="sr-only">(current)</span></a>
+            <div *ngIf="link.subLink" class="dropdown-content">
+                <ul>
+                    <li *ngFor="let subLink of link.subLinks">
+                        <a pageScroll href="#{{subLink.id}}"><strong>{{subLink.title}}</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <!--li *ngFor="let link of links2" class="dropdown nav-item">
+            <a pageScroll class="dropdown-toggle col-md-6" href="#{{link.id}}">{{link.title}}<span
                     class="sr-only">(current)</span></a>
             <div *ngIf="link.subLink" class="dropdown-content">
                 <div *ngFor="let subLink of link.subLinks">
-                    <a pageScroll href="#{{subLink.id}}">{{subLink.title}}</a>
+                    <a pageScroll href="#{{subLink.id}}"><strong>{{subLink.title}}</strong></a>
                 </div>
             </div>
-        </li>
-        <li routerLinkActive="active">
-            <a routerLink="/blog">Blog</a>
-        </li>
+        </li-->
+
     </ul>
-    <br />
     <!--app-navbar></app-navbar>
     <app-home></app-home>
     <app-footer></app-footer-->
