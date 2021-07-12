@@ -16,7 +16,6 @@ import { BlogComponent } from './blog/blog.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NgxLinkPreviewModule } from 'ngx-link-preview';
 
 @NgModule({
   declarations: [
@@ -41,7 +40,6 @@ import { NgxLinkPreviewModule } from 'ngx-link-preview';
     Ng2PageScrollModule,
     CommonModule,
     RouterModule,
-    NgxLinkPreviewModule
     
   ],
   providers: [],

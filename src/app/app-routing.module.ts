@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', redirectTo: '/', pathMatch: 'full' },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/404' },
 
