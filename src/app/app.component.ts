@@ -10,11 +10,22 @@ export class AppComponent {
 
   isBlog = false;
 
+  showSubLink = 'none';
+
   blog(){
     this.isBlog = true;
   }
   home(){
     this.isBlog = false;
+  }
+  subLink(){
+
+    if(this.showSubLink=='none'){
+      this.showSubLink='block';
+    }else{
+      this.showSubLink= 'none';
+    }
+
   }
 
   links: any[] = [
@@ -27,7 +38,7 @@ export class AppComponent {
     },
     {
       title: "Sobre a Mindful Play",
-      id: "about",
+      id: "#",
       subLink: true,
       subLinks: [
         {
@@ -49,7 +60,7 @@ export class AppComponent {
     },
     {
       title: "Mindfulness no ambiente educacional",
-      id: "ambiente",
+      id: "#",
       subLink: true,
       subLinks: [
         {
