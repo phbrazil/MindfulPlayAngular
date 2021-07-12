@@ -42,7 +42,7 @@ export class AppComponent {
     },
     {
       title: "Sobre a instrutora",
-      id: "aboutInst",
+      id: "instrutora",
       subLink: false,
       subLinks: [{}
       ]
