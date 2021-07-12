@@ -6,6 +6,10 @@
     z-index: 100;
 
   }
+
+  .dropdown-toggle::after {
+    display:none;
+}
   
   .dropdown-content {
     display: none;
