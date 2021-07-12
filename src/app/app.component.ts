@@ -8,6 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'MindfulPlay';
 
+  isBlog = false;
+
+  blog(){
+    this.isBlog = true;
+  }
+  home(){
+    this.isBlog = false;
+  }
+
   links: any[] = [
     {
       title: "O que é Mindfulness?",
@@ -63,7 +72,7 @@ export class AppComponent {
           title: "Um novo ABC",
           id: "novoABC"
         },
-        
+
       ]
     },
     {

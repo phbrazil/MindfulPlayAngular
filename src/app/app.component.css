@@ -34,7 +34,7 @@
     color: #1E1E23;
     opacity:1;
     font-family: 'Reenie Beanie', sans serif;
-    font-size: 1.7em;
+    font-size: 2em;
     font-weight: 400;
     transition: 200ms;
   }
@@ -65,7 +65,7 @@
     color:#000;
     background:#ffc;
     display:block;
-    padding:1em;
+    padding:0.3em;
     transform: rotate(-6deg);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
   }
