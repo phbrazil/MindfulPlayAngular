@@ -32,12 +32,6 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.blogImages.forEach(element => {
-
-      console.log(element.imageName)
-      
-    });
-
   }
 
   public apiCallbackFn = (route: string) => {
