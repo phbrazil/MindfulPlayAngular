@@ -11,7 +11,7 @@
         <div *ngIf="!isBlog">
             <li routerLinkActive="active" *ngFor="let link of links" class="dropdown nav-item">
                 <a pageScroll (click)="subLink()" class="dropdown-toggle nav-link" data-hover="dropdown"
-                    href="#{{link.id}}">{{link.title}}<span class="sr-only">(current)</span></a>
+                    href="#{{link.id}}">{{link.title}}</a>
                 <!--div *ngIf="link.subLink" [ngClass]="showSubLink === 'none'? 'dropdown-content' : '' "-->
                 <div *ngIf="link.subLink" class="dropdown-content" style="margin-top: -30px;">
                     <ul>
