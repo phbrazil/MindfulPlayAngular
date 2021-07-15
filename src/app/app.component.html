@@ -13,7 +13,7 @@
                 <a pageScroll (click)="subLink()" class="dropdown-toggle nav-link" data-hover="dropdown"
                     href="#{{link.id}}">{{link.title}}</a>
                 <!--div *ngIf="link.subLink" [ngClass]="showSubLink === 'none'? 'dropdown-content' : '' "-->
-                <div *ngIf="link.subLink" class="dropdown-content" style="margin-top: -20px;">
+                <div *ngIf="link.subLink" class="dropdown-content" style="margin-top: -5px;">
                     <ul>
                         <li *ngFor="let subLink of link.subLinks">
                             <a pageScroll href="#{{subLink.id}}"><strong>{{subLink.title}}</strong></a>
